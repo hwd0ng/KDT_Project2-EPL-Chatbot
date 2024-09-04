@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'DungGeunMo', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    background-color: white;
+    width: 400px;
+    max-width: 100%;
+    max-height:90vh;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    height: 100%; /* 고정 높이 설정, 필요에 따라 조정 */
+    position: relative;
+}
+
+.chat-header {
+    background-color: #460B40;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.chat-header img {
+    height: 100px;
+    margin-left: 90px;
+}
+
+.chat-header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.chat-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-y: auto;
+}
+
+.chat-log {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.bot-message {
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.chat-message span {
+    padding: 10px 15px;
+    border-color: black;
+    border-radius: 20px;
+    max-width: 100%;
+    display: inline-block;
+}
+
+.user-message span {
+    background-color: #460B40;
+    color: white;
+    border-color: black;
+}
+
+.bot-message span {
+    background-color: #F1F0F0;
+}
+
+.chat-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+.chat-form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    background-color: #ECE6F0;
+    color: black;
+}
+
+.chat-from input[type='text']:hover {
+    background-color: #ECE6F0;
+    color: #ECE6F0;
+}
+
+/* placeholder 스타일 */
+.chat-form input[type="text"]::placeholder {
+    font-family: 'DungGeunMo', Arial, sans-serif; /* 웹 폰트 적용 */
+    color: #888; /* placeholder 텍스트 색상 */
+}
+
+
+.chat-form button {
+    background-color: #ECE6F0;
+    border: none;
+    padding: 0 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-form button img {
+    height: 20px;
+    width: 20px;
+}
+
+.chat-image1 {
+    height: 50px;
+    width: 50px;
+}
+
+.chat-image2 {
+    height: 50px;
+    width: 60px;
+}
+
+.chat-content {
+    position: relative;
+    font-family: 'DungGeunMo', Arial, sans-serif; /* 폰트 적용 */
+}
+
+.chat-message span {
+    line-height: 1.3; /* 추가된 줄간격 설정 */
+}

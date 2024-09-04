@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(74, 0, 79);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 1s ease; /* 배경색 전환 효과 설정 */
+}
+
+.intro-container {
+    position: relative;
+    text-align: center;
+}
+
+img {
+    width: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 1s ease, transform 1s ease; /* 로고 이동 효과 설정 */
+}
+
+body.white-bg {
+    background-color: white;
+}
+
+body.white-bg img {
+    top: 20px;
+    transform: translate(-50%, 0);
+}

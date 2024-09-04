@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPL</title>
+    <link rel="stylesheet" href="./quiz_style.css">
+    <script src="./quiz.js" defer></script>
+</head>
+<body>
+    <a href="./main.html">
+        <div class="name"><img src="./images/EPL.png" alt="Premiere Logo"></div>
+    </a>
+    <p class="quiz_1 blink">Click Logo!</p>
+    <p class="quiz_2">Quiz</p>
+    <div class="logo">
+        <img src="images/Arsenal.png" alt="Arsenal" onclick="handleTeamClick(event)">
+        <img src="images/Aston villa.png" alt="Aston villa" onclick="handleTeamClick(event)">
+        <img src="images/Bournemouth.png" alt="Bournemouth" onclick="handleTeamClick(event)">
+        <img src="images/Brentford.png" alt="Brentford" onclick="handleTeamClick(event)">
+        <img src="images/Brignton.png" alt="Brighton" onclick="handleTeamClick(event)">
+        <img src="images/Chelsea.png" alt="Chelsea" onclick="handleTeamClick(event)">
+        <img src="images/Crysyal Palace.png" alt="Crystal Palace" onclick="handleTeamClick(event)">
+        <img src="images/Everton.png" alt="Everton" onclick="handleTeamClick(event)">
+        <img src="images/Fulham.png" alt="Fulham" onclick="handleTeamClick(event)">
+        <img src="images/Ipswich Town.png" alt="Ipswich Town" onclick="handleTeamClick(event)">
+        <img src="images/Leister City.png" alt="Sheffield United" onclick="handleTeamClick(event)">
+        <img src="images/Liverpool.png" alt="Liverpool" onclick="handleTeamClick(event)">
+        <img src="images/Manchester City.png" alt="Manchester City" onclick="handleTeamClick(event)">
+        <img src="images/Manchster Uniterd.png" alt="Manchester United" onclick="handleTeamClick(event)">
+        <img src="images/Newcastle.png" alt="Newcastle" onclick="handleTeamClick(event)">
+        <img src="images/Nottingham.png" alt="Nottingham" onclick="handleTeamClick(event)">
+        <img src="images/Southampton.png" alt="Burnley" onclick="handleTeamClick(event)">
+        <img src="images/Tottenham.png" alt="Tottenham" onclick="handleTeamClick(event)">
+        <img src="images/Westham.png" alt="West Ham" onclick="handleTeamClick(event)">
+        <img src="images/Wolverhampton.png" alt="Wolverhampton" onclick="handleTeamClick(event)">
+    </div>
+    <div class="box" id="quizContainer" style="display: none;">
+        <div class="box_1" id="questionBox"></div>
+        <form class="box_2" id="quizForm">
+            <div id="optionsBox"></div>
+        </form>
+        <div id="submitButtonBox">
+            <button type="button" onclick="submitAnswer()">제출</button>
+        </div>
+        <div id="messageBox"></div>
+        <div id="otherButtonBox" style="display: none;">
+            <button type="button" onclick="loadNewQuestion()">다른 문제</button>
+        </div>
+    </div>
+</body>
+</html>

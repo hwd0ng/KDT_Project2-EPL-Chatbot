@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인트로</title>
+    <link rel="stylesheet" href="./static/intro_style.css">
+</head>
+<body>
+    <div class="intro-container">
+        <img src="static/images/EPL2.png" alt="로고 이미지">
+    </div>
+    <script>
+        setTimeout(changeBackground, 2000);
+
+        function changeBackground() {
+            document.body.classList.add('white-bg');
+            document.querySelector('.intro-container img').style.top = '30px';
+        }
+
+        // 3초 후에 main.html로 자동 이동
+        setTimeout(function() {
+            window.location.href = 'static/main.html';
+        }, 3000);
+
+        // 클릭 이벤트에 따른 깜빡임 처리
+        document.querySelector('.quiz_1').addEventListener('click', function() {
+            // 클래스를 추가하여 깜빡이는 효과를 보여줌
+            this.classList.add('blink');
+            
+            // 1초 후에 깜빡임 클래스 제거
+            setTimeout(() => {
+                this.classList.remove('blink');
+            }, 1000);
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'DungGeunMo', sans-serif; /* 적용된 글씨체 설정 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: white;
+    text-align: center;
+}
+
+.name {
+    margin-bottom: 20px;
+}
+
+.name img {
+    width: 150px;
+    margin-bottom: 50px;
+    margin-top: -200px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* 버튼 사이의 간격 */
+    justify-content: center;
+}
+
+a.quiz_button,
+a.chatbot_button {
+    background-color: rgb(74, 0, 79);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-family: 'DungGeunMo', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+}
+
+a.quiz_button:hover,
+a.chatbot_button:hover {
+    background-color: rgb(90, 0, 100);
+}
+.articles_button {
+    margin-top: 10px;
+}
+.articles_button{
+    background-color: rgb(74, 0, 79);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-family: 'DungGeunMo', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 30px;
+}
+
+.articles_button:hover {
+    background-color: rgb(90, 0, 100);
+    cursor: pointer;
+}

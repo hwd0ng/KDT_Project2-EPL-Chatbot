@@ -1,0 +1,4 @@
+.idea/
+.venv/
+__pycache__/
+fine_tuned_kogpt2/

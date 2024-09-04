@@ -1,0 +1,199 @@
+/* 기존 스타일 */
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'DungGeunMo', Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+.name img {
+    width: 150px;
+    height: auto;
+}
+
+.logo {
+    width: 80%;
+    max-width: 1200px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    padding: 20px;
+    border: 2px solid rgb(74, 0, 79);
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
+}
+
+.logo::before, .logo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: white;
+}
+
+.logo img {
+    max-width: 20px;
+    height: auto;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.logo img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.box {
+    width: 40%;
+    max-width: 1000px;
+    min-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.box_1, .box_2{
+    width: 100%;
+    border: 2px solid rgb(74, 0, 79);
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding: 20px;
+    margin-left: -20px;
+}
+
+.box_1 {
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.quiz_1 {
+    font-family: 'DungGeunMo', sans-serif;
+    font-size: 30px; 
+    color: rgb(74, 0, 79);
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.quiz_2 {
+    font-family: 'DungGeunMo', sans-serif;
+    font-size: 30px;
+    color: rgb(74, 0, 79);
+    margin-bottom: 0px;
+}
+
+@keyframes blink-animation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.blink {
+    animation: blink-animation 2s infinite;
+}
+
+#resultBox {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.radio-label {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.radio-group div {
+    margin: 5px 0;
+}
+
+#nextButton {
+    background-color: rgb(74, 0, 79);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'DungGeunMo', sans-serif;
+    margin-right: 60px;
+}
+
+#nextButton:hover {
+    background-color: #3d45e0;
+}
+
+button {
+    background-color: rgb(74, 0, 79);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'DungGeunMo', sans-serif;
+}
+
+button:hover {
+    background-color: rgb(145, 79, 149);
+}
+
+button[type="button"] {
+    display: block;
+    margin: 10px auto; /* 중앙 정렬 및 위쪽 마진 */
+}
+
+.pagination-number {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    border: 1px solid rgb(74, 0, 79);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination-number.active {
+    background-color: rgb(74, 0, 79);
+    color: white;
+}
+
+#messageBox {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center; /* 메시지 가운데 정렬 */
+}

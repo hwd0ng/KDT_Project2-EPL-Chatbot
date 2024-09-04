@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="./chat_style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="./images/premier-league-logo.png" alt="Premier League Logo">
+            <h1>EPL</h1>
+        </div>
+        <div class="chat-box">
+            <div class="chat-log" id="chat-log"></div>
+            <form id="chat-form" class="chat-form" action="/chatbot/" method="post">
+                <input type="text" id="question" name="question" placeholder="EPL 관련 질문을 해주세요" required>
+                <button type="submit"><img src="images/arrow.png" alt="Send"></button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementById('chat-form');
+        const chatLog = document.getElementById('chat-log');
+        const userImage = 'images/user.png';
+        const botImage = 'images/logo.png';
+    
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const formData = new FormData(form);
+            const question = formData.get('question');
+    
+            // Add user's question to the chat log
+            const userMessage = document.createElement('div');
+            userMessage.classList.add('chat-message', 'user-message');
+            userMessage.innerHTML = `
+                <div class="chat-content">
+                    <span>${question}</span>
+                </div>
+                <img src="${userImage}" class="chat-image1">
+            `;
+            chatLog.appendChild(userMessage);
+    
+            // Fetch response from server
+            const response = await fetch('/chatbot/', {
+                method: 'POST',
+                body: formData
+            });
+            const result = await response.json();
+    
+            // Add bot's response to the chat log
+            const botMessage = document.createElement('div');
+            botMessage.classList.add('chat-message', 'bot-message');
+            botMessage.innerHTML = `
+                <img src="${botImage}" class="chat-image2">
+                <div class="chat-content">
+                    <span id="bot-response-${chatLog.childElementCount}"></span>
+                </div>
+            `;
+            chatLog.appendChild(botMessage);
+    
+            // Apply typing effect to the bot's response
+            const botResponseElement = document.getElementById(`bot-response-${chatLog.childElementCount - 1}`);
+            typeWriter(botResponseElement, result.response, 50);
+    
+            // Scroll to the bottom of the chat log
+            chatLog.scrollTop = chatLog.scrollHeight;
+    
+            // Clear the input field
+            form.reset();
+        });
+    
+        // Typing effect function
+        function typeWriter(element, text, speed) {
+            let index = 0;
+            function type() {
+                if (index < text.length) {
+                    element.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+    </script>
+    
+    
+</body>
+</html>

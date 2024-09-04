@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.name img {
+    width: 150px;
+    height: auto;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.logo {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    padding: 20px;
+    border: 2px solid rgb(74, 0, 79);
+    border-radius: 15px;
+    background-color: white;
+    margin-bottom: 0px;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: white;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: white;
+}
+
+.logo img {
+    max-width: 20px;
+    height: auto;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.logo img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.quiz_1 {
+    font-family: 'DungGeunMo', sans-serif;
+    margin-bottom: -25px;
+    color: rgb(74, 0, 79);
+}
+
+.quiz_2 {
+    font-family: 'DungGeunMo', sans-serif;
+    font-size: 24px;
+    color: rgb(74, 0, 79);
+    margin-bottom: -10px;
+}
+
+@keyframes blink-animation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.blink {
+    animation: blink-animation 1s infinite;
+}
+
+.article_contents p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.article_contents div {
+    width: 320px;
+    max-width: 1200px;
+    margin: 20px auto;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    padding: 20px;
+    border: 2px solid rgb(74, 0, 79);
+    border-radius: 15px;
+    background-color: white;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article_contents div textarea {
+    width: 90%;
+    border: dashed 1px black;
+    background-color: rgb(236, 229, 239);
+    border-radius: 10px;
+    padding: 5px;
+    font-family: 'DungGeunMo', sans-serif;
+    color: rgb(74, 0, 79);
+    resize: none;
+    overflow-y: auto;
+    line-height: 1.4; /* 줄간격 설정 */
+    height: 1rem;
+}
+
+.article_contents div textarea#content1 {
+    text-align: center; /* title 중앙 정렬 */
+}
+
+.article_contents div textarea:not(#content1) {
+    text-align: left; /* context와 summary 왼쪽 정렬 */
+}
+
+.article_contents p {
+    margin-top: -5px;
+    margin-bottom: -5px;
+    text-align: center;
+    font-family: 'DungGeunMo', sans-serif;
+    color: black;
+    line-height: 1.4; /* 줄간격 설정 */
+}
+
+.article_contents > div {
+    display: none;
+}
+
+.article_contents > div:first-child {
+    display: block;
+}
+
+.pagination {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.page-btn{
+    font-family: 'DungGeunMo';
+    background-color: rgb(236, 229, 239);
+    border: 1.5px solid rgb(74, 0, 79);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-btn:hover, .page-btn.active {
+    background-color: white;
+}
+
+.article_contents textarea {
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+}
