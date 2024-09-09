@@ -1,5 +1,5 @@
 # KDT_Project2-EPL_Chatbot
-### 잉글랜드 프리미어 리그 챗봇
+### NLP를 활용한 EPL 챗봇 개발 프로젝트
 
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/dd901782-c431-448a-a4d9-d03f081ed374">
 <hr width="800">
