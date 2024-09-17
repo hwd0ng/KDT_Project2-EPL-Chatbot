@@ -17,12 +17,15 @@
 <img width="362" alt="image" src="https://github.com/user-attachments/assets/7c32271d-df07-4cf4-bb3d-8e7dad771b96">
 
 - CHAT-BOT: EPL에 속한 구단들에 대한 질문과 답변을 주고받을 수 있습니다.
+  
 <img width="306" alt="image" src="https://github.com/user-attachments/assets/c5f36055-5ef8-4fd4-831b-c54c4e662140">
 
-- Articles: 특정 구단 로고를 누르면 해당 구단에 대한 최신 뉴스 기사 원문 및 원문 핵심 내용을 요약해서 보여줍니다.
+- Articles: 특정 구단 로고를 누르면 해당 구단에 대한 최신 뉴스 기사 원문 및 원문 핵심 내용을 요약해서 보여줍니다
+  
 <img width="298" alt="image" src="https://github.com/user-attachments/assets/0f68cee9-f675-477e-b734-b7222d8504ad">
 
 - Quiz: 특정 구단 로고를 누르면 해당 구단에 대한 랜덤 퀴즈가 출제되고 사용자가 정답을 선택하면 결과를 보여줍니다.
+  
 <img width="303" alt="image" src="https://github.com/user-attachments/assets/105a0397-27d8-4742-b848-7838d4a79d6a">
 <hr width="800"> 
 
